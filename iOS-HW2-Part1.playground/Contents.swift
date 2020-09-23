@@ -30,8 +30,24 @@ import UIKit
  #
  اكثر من 40 -> سمنة مفرطه
 */
+var height1 = 1.15
+var weight1 = 50.5
 
+func bmi( weight: Double , height : Double ) {
+    let bmi = weight / (height * height)
+    print(bmi)
+    if bmi < 18.5{
+        print("ضعيف")
+    }else if bmi < 30.0{
+        print("وزن طبيعي")
+    }else if bmi < 40.0{
+        print("سمنه خفيفه")
+    }else{
+        print("سمنه مفرطه")
+    }
+}
 
+bmi(weight: 90.0, height: 1.50)
 
 
 
@@ -51,4 +67,14 @@ import UIKit
   #
  و اذا كان فوق ١٨ سوف يتم طباعة نص بأن المتقدم يُسمح له بإمتلاك رخصة قيادة
 */
+var myName = "fatmah"
+var myAge = 17
 
+func license(name: String, age : Int){
+if myAge < 18{
+    print("\(myName) can not have her license yet")
+}else{
+    print("\(myName) can have her license")
+}
+}
+license(name: myName, age: myAge)
